@@ -1,1 +1,0 @@
-# seo-sang-ho.github.io
