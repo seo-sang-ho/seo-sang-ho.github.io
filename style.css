@@ -52,23 +52,6 @@ h2 {
   margin-bottom: 15px;
 }
 
-/* 소셜 아이콘 */
-.social-icons {
-  margin-bottom: 15px;
-}
-
-.social-icons a {
-  color: #333;
-  font-size: 18px;
-  margin: 0 6px;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.social-icons a:hover {
-  color: #0077b5;
-}
-
 /* 연락처 정보 */
 .info {
   text-align: left;
