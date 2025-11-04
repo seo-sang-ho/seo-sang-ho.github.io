@@ -101,3 +101,25 @@ h2 {
   margin-bottom: 8px;
   color: #444;
 }
+
+/* 스택 태그 */
+.stack-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.stack-tags span {
+  background-color: #f1f3f5;
+  color: #333;
+  font-size: 13px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.stack-tags span:hover {
+  background-color: #e6f0ff;
+  border-color: #a5c8ff;
+}
