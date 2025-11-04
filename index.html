@@ -1,24 +1,68 @@
 <!DOCTYPE html>
+<html lang="ko">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>백엔드 이력서</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>백엔드 이력서</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="profile-card">
-    <img src="profile.png" alt="프로필 사진" class="profile-img" />
-    
-    <h2>서상호</h2>
-    <p class="title">백엔드 개발자</p>
+  <div class="container">
 
-    <div class="info">
-      <p><i class="fas fa-phone"></i> 010-3307-2049</p>
-      <p><i class="fab fa-github"></i> <a href="https://github.com/seo-sang-ho" target="_blank">https://github.com/seo-sang-ho</a></p>
-      <p><i class="fas fa-envelope"></i> roka0131@naver.com</p>
-      <p><i class="fas fa-map-marker-alt"></i> 인천, 대한민국</p>
+    <!-- 프로필 카드 -->
+    <div class="profile-card">
+      <img src="profile.png" alt="프로필 사진" class="profile-img" />
+      <h2>서상호</h2>
+      <p class="title">Backend Developer</p>
+
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-github"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <div class="info">
+        <p><i class="fas fa-phone"></i> 010-3307-2049</p>
+        <p><i class="fas fa-envelope"></i> roka0131@naver.com</p>
+        <p><i class="fas fa-map-marker-alt"></i> 인천, 대한민국</p>
+      </div>
     </div>
+
+    <!-- 기술 스택 -->
+    <div class="stack-card">
+      <h3><i class="fas fa-code"></i> 기술 스택</h3>
+
+      <div class="stack-section">
+        <p class="stack-title">Backend</p>
+        <div class="stack-tags">
+          <span>Java</span>
+          <span>Spring Boot</span>
+          <span>Node.js</span>
+          <span>Python</span>
+        </div>
+      </div>
+
+      <div class="stack-section">
+        <p class="stack-title">Database</p>
+        <div class="stack-tags">
+          <span>MySQL</span>
+          <span>PostgreSQL</span>
+          <span>Redis</span>
+          <span>MongoDB</span>
+        </div>
+      </div>
+
+      <div class="stack-section">
+        <p class="stack-title">DevOps</p>
+        <div class="stack-tags">
+          <span>Docker</span>
+          <span>AWS</span>
+          <span>Jenkins</span>
+        </div>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
