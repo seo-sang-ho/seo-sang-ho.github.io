@@ -9,45 +9,82 @@
 </head>
 <body>
   <div class="container">
-
-    <!-- 프로필 카드 -->
-    <div class="profile-card">
-      <img src="profile.png" alt="프로필 사진" class="profile-img" />
-      <h2>서상호</h2>
-      <p class="title">Backend Developer</p>
-
-      <div class="info">
-        <p><i class="fas fa-phone"></i> 010-3307-2049</p>
-        <p><i class="fas fa-envelope"></i> roka0131@naver.com</p>
-        <p><i class="fab fa-github"></i> <a href="https://github.com/seo-sang-ho" target="_blank">https://github.com/seo-sang-ho</a></p>
-        <p><i class="fas fa-map-marker-alt"></i> 인천, 대한민국</p>
-      </div>
-    </div>
-
-    <!-- 기술 스택 -->
-    <div class="stack-card">
-      <h3><i class="fas fa-code"></i> 기술 스택</h3>
-
-      <div class="stack-section">
-        <p class="stack-title">Backend</p>
-        <div class="stack-tags">
-          <span>Java</span>
-          <span>Spring Boot</span>
-          <span>Spring Data JPA</span>
-          <span>Python</span>
+    <!-- 왼쪽 영역 -->
+    <aside class="left-section">
+      <div class="profile-card">
+        <img src="profile.png" alt="프로필 사진" class="profile-img" />
+        <h2>서상호</h2>
+        <p class="title">백엔드 개발자</p>
+        <div class="info">
+          <p><i class="fas fa-phone"></i> 010-3307-2049</p>
+          <p><i class="fas fa-envelope"></i> roka0131@naver.com</p>
+          <p><i class="fas fa-github"><a href="https://github.com/seo-sang-ho"></a>https://github.com/seo-sang-ho</i></p>
+          <p><i class="fas fa-map-marker-alt"></i> 인천, 대한민국</p>
         </div>
       </div>
 
-      <div class="stack-section">
-        <p class="stack-title">Database</p>
-        <div class="stack-tags">
-          <span>MySQL</span>
-          <span>QueryDSL</span>
+      <div class="card">
+        <h3><i class="fas fa-code"></i> 기술 스택</h3>
+        <div class="stack-section">
+          <p class="stack-title">Backend</p>
+          <div class="stack-tags">
+            <span>Java</span>
+            <span>Spring Boot</span>
+            <span>Spring Data JPA</span>
+          </div>
+        </div>
+        <div class="stack-section">
+          <p class="stack-title">Database</p>
+          <div class="stack-tags">
+            <span>MySQL</span>
+            <span>QueryDSL</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- 오른쪽 영역 -->
+    <main class="right-section">
+      <div class="card">
+        <h3><i class="fas fa-user"></i> 소개</h3>
+        <p>
+          신입 백엔드 개발자. Java,Spring Boot를 주력으로 하며, 효율적인 API 설계와 데이터베이스 최적화에 관심이 많습니다.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3><i class="fas fa-briefcase"></i> 경력</h3>
+        <div class="career-item">
+          <h4>Senior Backend Developer <span>2022 - 현재</span></h4>
+          <p class="company">테크 스타트업</p>
+          <ul>
+            <li>마이크로서비스 아키텍처 설계 및 구현</li>
+            <li>일일 100만+ API 요청 처리 시스템 개발</li>
+            <li>AWS 기반 클라우드 인프라 구축</li>
+            <li>팀 리딩 및 코드 리뷰 진행</li>
+          </ul>
+        </div>
+
+        <div class="career-item">
+          <h4>Backend Developer <span>2020 - 2022</span></h4>
+          <p class="company">IT 서비스 회사</p>
+          <ul>
+            <li>RESTful API 개발 및 유지보수</li>
+            <li>데이터베이스 성능 최적화</li>
+            <li>CI/CD 파이프라인 구축</li>
+            <li>레거시 시스템 리팩토링</li>
+          </ul>
         </div>
       </div>
 
-    </div>
-
+      <div class="card">
+        <h3><i class="fas fa-folder-open"></i> 주요 프로젝트</h3>
+        <div class="project-item">
+          <h4>E-Commerce 플랫폼 <span>2023.03 - 2025.01</span></h4>
+          <p>대규모 온라인 쇼핑몰의 백엔드 시스템을 개발하였으며, 주문, 결제, 재고 관리 API를 담당했습니다.</p>
+        </div>
+      </div>
+    </main>
   </div>
 </body>
 </html>
