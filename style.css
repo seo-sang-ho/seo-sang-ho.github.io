@@ -1,4 +1,4 @@
-/* 테스트용 - 적용 여부 빠르게 확인 */
+/* 전체 페이지 스타일 */
 body {
   font-family: "Noto Sans KR", sans-serif;
   background-color: #f5f6fa;
@@ -9,20 +9,81 @@ body {
   margin: 0;
 }
 
-/* 카드에 빨간 테두리로 로드 확인 */
+/* 프로필 카드 */
 .profile-card {
-  background: #fff;
+  background: #ffffff;
   width: 280px;
   text-align: center;
   border-radius: 12px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+
+  /* 회색 테두리 + 그림자 */
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
   padding: 25px 20px;
-  border: 3px solid #ff4d4d; /* 적용 확인용 */
+  transition: all 0.3s ease;
 }
 
+/* 마우스 호버 시 살짝 떠오르는 효과 */
+.profile-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* 프로필 이미지 */
 .profile-img {
   width: 100px;
   height: 100px;
   border-radius: 50%;
   object-fit: cover;
+  border: 2px solid #e0e0e0;
+}
+
+/* 이름 */
+h2 {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* 직업 / 타이틀 */
+.title {
+  color: #666;
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+/* 정보 섹션 */
+.info {
+  text-align: left;
+  font-size: 14px;
+  color: #444;
+  margin-top: 10px;
+}
+
+/* 각 정보 줄 */
+.info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  word-break: break-all;
+}
+
+/* 아이콘 */
+.info i {
+  color: #333;
+  width: 18px;
+  text-align: center;
+}
+
+/* 링크 스타일 */
+.info a {
+  color: #333;
+  text-decoration: none;
+}
+
+.info a:hover {
+  color: #0077b5;
+  text-decoration: underline;
 }
