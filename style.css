@@ -126,3 +126,78 @@ body {
   font-size: 14px;
   color: #4b5563;
 }
+
+/* 주요 프로젝트 카드 */
+.project-card {
+  background: #fff;
+  width: 700px;
+  border-radius: 12px;
+  border: 1px solid #dcdcdc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 20px 25px;
+  margin-top: 20px;
+}
+
+.project-card h3 {
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+/* 각 프로젝트 */
+.project-item {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin-bottom: 14px;
+  transition: all 0.2s ease;
+}
+
+.project-item:hover {
+  background-color: #fafafa;
+  border-color: #ccc;
+}
+
+.project-item h4 {
+  margin: 0;
+  font-size: 15px;
+  color: #222;
+}
+
+.period {
+  font-size: 13px;
+  color: #777;
+  margin: 6px 0;
+}
+
+.desc {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+}
+
+/* 프로젝트 태그 */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.project-tags span {
+  background-color: #f1f3f5;
+  color: #333;
+  font-size: 12.5px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.project-tags span:hover {
+  background-color: #e6f0ff;
+  border-color: #a5c8ff;
+}
+
