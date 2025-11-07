@@ -27,6 +27,14 @@ body {
   gap: 20px;
 }
 
+.right-section p {
+  line-height: 1.6;
+  margin-bottom: 8px;
+  max-width: 600px; /* ✅ 문단 최대 폭 제한 */
+  text-align: justify; /* ✅ 좌우 정렬로 균형 잡기 */
+  word-break: keep-all; /* ✅ 한국어 단어가 어색하게 잘리는 것 방지 */
+}
+
 .card, .profile-card {
   background-color: #fff;
   border: 1px solid #e5e7eb;
