@@ -4,27 +4,94 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>백엔드 이력서</title>
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+
+  <!-- 🔽 프로젝트 토글용 스타일 -->
+  <style>
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .toggle-btn {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .project-detail {
+      display: none;
+      margin-top: 12px;
+    }
+
+    .project-detail ul {
+      padding-left: 18px;
+      margin-bottom: 10px;
+    }
+
+    .project-images {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .project-images img {
+      width: 240px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+    }
+
+    .project-item.active .project-detail {
+      display: block;
+    }
+
+    .project-item.active .toggle-btn i {
+      transform: rotate(180deg);
+    }
+
+    .toggle-btn i {
+      transition: transform 0.3s ease;
+    }
+  </style>
 </head>
+
 <body>
   <div class="container">
     <!-- 왼쪽 영역 -->
     <aside class="left-section">
       <div class="profile-card">
-        <img src="/img/증명(2.5x3.5cm).jpg" alt="프로필 사진" class="profile-img" />
+        <img
+          src="/img/증명(2.5x3.5cm).jpg"
+          alt="프로필 사진"
+          class="profile-img"
+        />
         <h2>서상호</h2>
         <p class="title">백엔드 개발자</p>
+
         <div class="info">
           <p><i class="fas fa-phone"></i> 010-3307-2049</p>
           <p><i class="fas fa-envelope"></i> roka0131@naver.com</p>
-          <p><i class="fab fa-github"></i> <a href="https://github.com/seo-sang-ho" target="_blank">https://github.com/seo-sang-ho</a></p>
+          <p>
+            <i class="fab fa-github"></i>
+            <a href="https://github.com/seo-sang-ho" target="_blank">
+              https://github.com/seo-sang-ho
+            </a>
+          </p>
           <p><i class="fas fa-map-marker-alt"></i> 인천, 대한민국</p>
         </div>
       </div>
 
       <div class="card">
         <h3><i class="fas fa-code"></i> 기술 스택</h3>
+
         <div class="stack-section">
           <p class="stack-title">Backend</p>
           <div class="stack-tags">
@@ -33,6 +100,7 @@
             <span>Spring Data JPA</span>
           </div>
         </div>
+
         <div class="stack-section">
           <p class="stack-title">Database</p>
           <div class="stack-tags">
@@ -40,6 +108,7 @@
             <span>QueryDSL</span>
           </div>
         </div>
+
         <div class="stack-section">
           <p class="stack-title">etc.</p>
           <div class="stack-tags">
@@ -56,94 +125,77 @@
       <div class="card">
         <h3><i class="fas fa-user"></i> 소개</h3>
         <p>
-            웹 개발을 전공으로 졸업하였으며, 부트캠프를 통해 다양한 팀 프로젝트를 진행하며 기획부터 개발, 배포까지의 전 과정을 경험했습니다.<br>
-            이 과정에서 소통과 협업의 중요성을 깨달았고, 함께할 때 더 큰 성과를 낼 수 있다는 것을 배웠습니다.<br>
-            프로젝트를 진행하면서 문서화 습관과 개발 속도를 개선하기 위해 꾸준히 노력했으며, 개인 개발과는 다른 협업 중심의 개발 방식을 체득했습니다.<br>
-            단순히 따라 하기보다는 원리를 이해하고 스스로의 것으로 만드는 것을 지향합니다.
+          웹 개발을 전공으로 졸업하였으며, 부트캠프를 통해 다양한 팀 프로젝트를
+          진행하며 기획부터 개발, 배포까지의 전 과정을 경험했습니다.<br />
+          소통과 협업의 중요성을 깨달았고, 단순 구현이 아닌 원리 이해를
+          지향합니다.
         </p>
       </div>
 
-        <!-- 주요 프로젝트 -->
-    <div class="project-card">
+      <!-- 주요 프로젝트 -->
+      <div class="project-card">
         <h3><i class="fas fa-folder-open"></i> 주요 프로젝트</h3>
 
+        <!-- 🔥 지도 메모 프로젝트 (토글 적용) -->
         <div class="project-item">
+          <div class="project-header">
             <h4>지도 메모 프로젝트 - 개인</h4>
-            <p class="period">2025.11 - 2025.12 (배포 중지)</p>
-            <p class="desc">지도 메모장 서비스</p>
-            <div class="project-tags">
+            <button class="toggle-btn">
+              <i class="fas fa-chevron-down"></i>
+            </button>
+          </div>
+
+          <p class="period">2025.11 - 2025.12 (배포 중지)</p>
+          <p class="desc">지도 메모장 서비스</p>
+
+          <div class="project-tags">
             <span>Spring Boot</span>
             <span>Spring Data JPA</span>
             <span>Spring Security</span>
             <span>MySQL</span>
             <span>React + Vite</span>
-            <span>Vercel + Railway(배포)</span>
+            <span>Vercel + Railway</span>
+          </div>
+
+          <div class="project-detail">
+            <ul>
+              <li>JWT 기반 로그인 및 인증/인가 구현</li>
+              <li>지도 클릭을 통한 메모 등록 및 조회 기능</li>
+              <li>사용자별 메모 접근 권한 분리</li>
+              <li>REST API 설계 및 프론트엔드 연동</li>
+            </ul>
+
+            <div class="project-images">
+              <img src="/img/mapmemo_1.png" alt="지도 화면" />
+              <img src="/img/mapmemo_2.png" alt="메모 등록 화면" />
             </div>
-        </div>
-      
-        <div class="project-item">
-            <h4>요리 레시피 추천 - 냉시피</h4>
-            <p class="period">2024.01 - 2024.02 (배포 중지)</p>
-            <p class="desc">재료에 따른 레시피 추천 서비스</p>
-            <div class="project-tags">
-            <span>Spring Boot</span>
-            <span>Spring Data JPA</span>
-            <span>MySQL</span>
-            </div>
-        </div>
-        
-        <div class="project-item">
-            <h4>운동 파트너 매칭 - 8arm</h4>
-            <p class="period">2024.03 - 2022.04 (배포 중지)</p>
-            <p class="desc">WebSocket 기반 운동 파트너 매칭 서비스</p>
-            <div class="project-tags">
-            <span>Spring Boot</span>
-            <span>Spring Data JPA</span>
-            <span>MySQL</span>
-            <span>WebSocket</span>
-            </div>
-        </div>
+          </div>
         </div>
 
+        <!-- 나머지 프로젝트 (기존 유지) -->
+        <div class="project-item">
+          <h4>요리 레시피 추천 - 냉시피</h4>
+          <p class="period">2024.01 - 2024.02 (배포 중지)</p>
+          <p class="desc">재료에 따른 레시피 추천 서비스</p>
+        </div>
 
-      <div class="card">
-        <h3><i class="fas fa-briefcase"></i> 교육</h3>
-        <div class="career-item">
-          <h4>멋쟁이 사자처럼 백엔드 수료<span>2023.10 - 2024.04</span></h4>
-          <p class="company">멋쟁이 사자처럼</p>
-          <ul>
-            <li>java/spring boot 교육 및 프로젝트 진행</li>
-            <li>매주 알고리즘 스터디 진행</li>
-          </ul>
+        <div class="project-item">
+          <h4>운동 파트너 매칭 - 8arm</h4>
+          <p class="period">2024.03 - 2024.04 (배포 중지)</p>
+          <p class="desc">WebSocket 기반 운동 파트너 매칭 서비스</p>
         </div>
       </div>
-
-            <!-- 학력 -->
-    <div class="card">
-    <h3><i class="fas fa-graduation-cap"></i> 학력</h3>
-    <div class="career-item">
-        <h4>멀티미디어학과 학사 <span>2018 - 2024</span></h4>
-        <p class="company">남서울대학교</p>
-        <ul>
-        <li>전공: 웹 개발</li>
-        <li>졸업 프로젝트로 웹 애플리케이션 개발 경험</li>
-        </ul>
-    </div>
-    </div>
-
-    <!-- 자격증 -->
-    <div class="card">
-    <h3><i class="fas fa-certificate"></i> 자격증</h3>
-    <div class="career-item">
-        <h4>정보처리기사 <span>2023.11</span></h4>
-        <p class="company">한국산업인력공단</p>
-        <ul>
-        <li>소프트웨어 설계 및 데이터베이스 구축 능력 검증</li>
-        </ul>
-    </div>
-    </div>
-
     </main>
   </div>
+
+  <!-- 🔽 토글 스크립트 -->
+  <script>
+    document.querySelectorAll(".toggle-btn").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const item = btn.closest(".project-item");
+        item.classList.toggle("active");
+      });
+    });
+  </script>
 </body>
 </html>
