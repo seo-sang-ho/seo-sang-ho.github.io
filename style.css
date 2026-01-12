@@ -293,14 +293,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
-.project-images img {
-  transition: transform 0.3s ease;
-  cursor: pointer;
-}
-
-.project-images img:hover {
-  transform: scale(1.03);
-}
 /* =========================
    교육 / 경력
 ========================= */
