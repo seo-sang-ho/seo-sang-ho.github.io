@@ -181,40 +181,46 @@
 
   <!-- 🔽 토글 스크립트 -->
 <script>
-  /* 프로젝트 토글 */
-  document.querySelectorAll(".project-header").forEach(header => {
-    header.addEventListener("click", () => {
-      header.closest(".project-item").classList.toggle("active");
+  document.addEventListener("DOMContentLoaded", () => {
+    console.log("🔥 DOM loaded");
+
+    // 프로젝트 토글
+    document.querySelectorAll(".project-header").forEach(header => {
+      header.addEventListener("click", () => {
+        header.closest(".project-item").classList.toggle("active");
+      });
+    });
+
+    const modal = document.getElementById("image-modal");
+    const modalImg = document.getElementById("modal-image");
+    const modalCaption = document.getElementById("modal-caption");
+    const closeBtn = document.querySelector(".modal-close");
+
+    document.addEventListener("click", (e) => {
+      const img = e.target.closest(".project-images img");
+      if (!img) return;
+
+      console.log("🔥 image click detected");
+
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+
+      const caption = img.closest("figure")?.querySelector("figcaption");
+      modalCaption.textContent = caption ? caption.textContent : "";
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.style.display = "none";
+      }
     });
   });
-
-  /* ===== 이미지 확대 모달 (이벤트 위임 방식) ===== */
-  const modal = document.getElementById("image-modal");
-  const modalImg = document.getElementById("modal-image");
-  const modalCaption = document.getElementById("modal-caption");
-  const closeBtn = document.querySelector(".modal-close");
-
-  document.addEventListener("click", (e) => {
-    const img = e.target.closest(".project-images img");
-    if (!img) return;
-
-    modal.style.display = "flex";
-    modalImg.src = img.src;
-
-    const caption = img.closest("figure")?.querySelector("figcaption");
-    modalCaption.textContent = caption ? caption.textContent : "";
-  });
-
-  closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-  });
-
-  modal.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-    }
-  });
 </script>
+
 
     <!-- 🔍 이미지 확대 모달 -->
 <div id="image-modal" class="image-modal">
