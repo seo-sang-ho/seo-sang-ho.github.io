@@ -361,3 +361,48 @@ ul {
 .project-links a:hover {
   background-color: #f3f4f6;
 }
+
+/* ===== 이미지 확대 모달 ===== */
+.image-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.image-modal p {
+  color: #fff;
+  margin-top: 12px;
+  font-size: 14px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 이미지 클릭 가능 표시 */
+.project-images img {
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+}
+
+.project-images img:hover {
+  transform: scale(1.04);
+}
+
