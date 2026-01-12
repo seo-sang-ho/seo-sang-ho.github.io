@@ -256,6 +256,23 @@ body {
   color: #374151;
   line-height: 1.5;
 }
+.project-header.clickable {
+  cursor: pointer;
+}
+
+.project-header i {
+  transition: transform 0.3s ease;
+}
+
+.project-item.active .project-header i {
+  transform: rotate(180deg);
+}
+
+.desc.highlight {
+  font-weight: 500;
+  margin: 8px 0;
+}
+
 
 /* =========================
    프로젝트 이미지
